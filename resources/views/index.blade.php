@@ -21,7 +21,7 @@
           <td>{{$iswa=>Kelas}}</td>
           <td>{{$iswa=>jk}}</td>
           <td>
-            <a button class="/crud/{{}}"clas="btn btn -primary btn-sm">detail></a>
+            <a button class="/crud/{{$siswa->id}}/sahow"clas="btn btn -primary btn-sm">detail></a>
             <button class="btn btn-primary btn-sm">Detail</button>
             </button class="btn btn-primary btn-sm">Edit<button>
             <button class="btn btn-primary btn-sm">Delete</button>
