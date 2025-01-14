@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Model\Siswa;
 
 class siswacontroller extends Controller
 {
@@ -13,7 +14,7 @@ class siswacontroller extends Controller
      */
     public function index()
     {
-        //
+        return view('index');
     }
 
     /**
@@ -21,7 +22,7 @@ class siswacontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create( )
     {
         //
     }
