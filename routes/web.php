@@ -15,8 +15,8 @@ use App\Http\Controllers\SiswaController;
 |
 */
 
-// Route::get('/', function() {
-//    return view('welcome');
-// });
+Route::get('/', function() {
+   return view('welcome');
+});
 
-Route::resource('/crud',  SiswaController::class);
+Route::resource('/crud',SiswaController::class);

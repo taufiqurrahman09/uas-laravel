@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use view;
 use App\Model\Siswa;
+use Illuminate\Http\Request;
 
 class siswacontroller extends Controller
 {
@@ -14,8 +15,9 @@ class siswacontroller extends Controller
      */
     public function index()
     {
-        return view('index');
-    }
+        return view('index'); 
+        'siswas' => Siswa::all()  
+    };
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +26,7 @@ class siswacontroller extends Controller
      */
     public function create( )
     {
-        //
+        return view('crud.create');
     }
 
     /**
@@ -35,7 +37,19 @@ class siswacontroller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = $request->validate([
+            'nama' => 'required|main:3',
+            'kelas' => 'required',
+            'mis'=> 'required',
+            'jk' => 'required',
+            'alamat' => 'required',
+            'hobi' => 'nullable'
+
+
+        ]);
+
+        siswa::created($rules);
+        return redirect('/crud.crate');
     }
 
     /**

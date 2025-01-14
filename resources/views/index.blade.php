@@ -13,18 +13,22 @@
           <th>Aksi</th>
         </tr>
       </thead>
+        @foreach ( $iswas as $key => Siswa )
        <tbody>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>{{$key+1}}</td>
+          <td>{{$iswa=> nama}}</td>
+          <td>{{$iswa=>Kelas}}</td>
+          <td>{{$iswa=>jk}}</td>
           <td>
+            <a button class="/crud/{{}}"clas="btn btn -primary btn-sm">detail></a>
             <button class="btn btn-primary btn-sm">Detail</button>
             </button class="btn btn-primary btn-sm">Edit<button>
             <button class="btn btn-primary btn-sm">Delete</button>
           </td>
         </tr>
        </tbody>
+       @endforeach
      </table>
    
+     @ndforeach
